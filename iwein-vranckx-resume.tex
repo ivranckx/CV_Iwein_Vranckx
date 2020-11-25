@@ -1,6 +1,7 @@
 % !TeX document-id = {29e3355d-f5f2-4d79-860a-225b1558ea09}
 % !TeX spellcheck = en_GB
-% !TeX program = xelatex
+% !TeX program = xelatex 
+%%%%-shell-escape
 
 % LaTeX source of my resume
 % =========================
@@ -19,10 +20,64 @@
 % Set the page margins.
 \usepackage[a4paper,margin=0.75in]{geometry}
 \usepackage{bibentry}
+\usepackage[a-1b]{pdfx} 
+\usepackage{draftwatermark}
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{1}
+\SetWatermarkColor[gray]{0.99}
 
 % Setup the language.
 \usepackage[english]{babel}
 \hyphenation{Some-long-word}
+
+% fancy quotes
+\definecolor{quotemark}{gray}{0.7}
+\makeatletter
+\def\fquote{%
+	\@ifnextchar[{\fquote@i}{\fquote@i[]}%]
+}%
+\def\fquote@i[#1]{%
+	\def\tempa{#1}%
+	\@ifnextchar[{\fquote@ii}{\fquote@ii[]}%]
+}%
+\def\fquote@ii[#1]{%
+	\def\tempb{#1}%
+	\@ifnextchar[{\fquote@iii}{\fquote@iii[]}%]
+}%
+\def\fquote@iii[#1]{%
+	\def\tempc{#1}%
+	\vspace{1em}%
+	\noindent%
+	\begin{list}{}{%
+			\setlength{\leftmargin}{0.1\textwidth}%
+			\setlength{\rightmargin}{0.1\textwidth}%
+		}%
+		\item[]%
+		\begin{picture}(0,0)%
+			\put(-15,-5){\makebox(0,0){\scalebox{3}{\textcolor{quotemark}{``}}}}%
+		\end{picture}%
+		\begingroup\itshape}%
+	%%%%********************************************************************
+	\def\endfquote{%
+		\endgroup\par%
+		\makebox[0pt][l]{%
+			\hspace{0.8\textwidth}%
+			\begin{picture}(0,0)(0,0)%
+				\put(15,15){\makebox(0,0){%
+						\scalebox{3}{\color{quotemark}''}}}%
+		\end{picture}}%
+		\ifx\tempa\empty%
+		\else%
+		\ifx\tempc\empty%
+		\hfill\rule{100pt}{0.5pt}\\\mbox{}\hfill\tempa,\ \emph{\tempb}%
+		\else%
+		\hfill\rule{100pt}{0.5pt}\\\mbox{}\hfill\tempa,\ \emph{\tempb},\ \tempc%
+		\fi\fi\par%
+		\vspace{0.5em}%
+	\end{list}%
+}%
+\makeatother
+%%%%***********************************
 
 % Makes resume-specific commands available.
 \usepackage{resume}
@@ -37,7 +92,6 @@
 
 % title on top of the document
 \maintitle{Iwein Vranckx}{October 14, 1978}{Last update on \today}
-
 \nobreakvspace{0.3em}  % add some page break averse vertical spacing
 
 % \noindent prevents paragraph's first lines from indenting
@@ -55,35 +109,34 @@
 \href{https://www.google.be/maps/place/Oudenbos+81a,+3202+Aarschot/@50.965459,4.8938466,13z/data=!4m5!3m4!1s0x47c143b94205376f:0xa562b96ef1bc6568!8m2!3d50.9657156!4d4.9015994}{\faMapMarker \; Oudenbos  81, 
 3202\thinspace Rillaar, Belgium}\sbull%{\large \sc ld}\sbull
 \href{https://orcid.org/0000-0002-2439-6906}{\textcolor{orcidlogocol}{\aiOrcid} \hspace{0.2mm} 0000-0002-2439-6906}
-
 \spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
-
-\roottitle{Summary}  % a root section title
-
-\vspace{-1.3em}  % some vertical spacing
-
-\begin{multicols}{2}  % open a multicolumn environment
-\noindent \emph{Entrepeneurial geek with roots in the open source movement. Passionately enabling software-related teams to deliver. Creates/\,structures/\,improves processes. Architects and helps to implement future-proof solutions. Coaches both individuals and groups.}
-%\\
-%At the age of seven (1989) Cies wrote his first lines of code in a \acr{LOGO}-like language on an \acr{MSX} (pre-\acr{PC}).  Two years later he attended a conference on an emerging new technology, the Internet, at the Erasmus University from which he would graduate 16 years later (2000) with a degree in Business Computer Science.
-%After being introduced to the open source movement in 1997, he taught himself a variety of skills including system administration and programming (Bash, Python, Ruby \& \CPP).  By 2002 he got his pet project \acr{KT}urtle ---a zero-entry-barrier programming environment--- included in \acr{KDE}'s \emph{edu} module, and thereby in almost every Linux distribution.
-%Extensively travelled Europe and Asia after graduating. On return his professional life became a mix of hands-on work in startups and web software agencies, while settling as a husband and father in personal life.
-\end{multicols}
-
-
-\spacedhrule{0em}{-0.4em}
-
+\begin{fquote}[J. Conrad][Heart of Darkness][1902]
+	Outliers are like thinking about an enigma. There it is before you - smiling, frowning, inviting, grand, mean, insipid, or savage, and always mute with an air of whispering, ‘Come and find out'.
+\end{fquote}
+%\spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
+%\roottitle{}  % a root section title
+%\vspace{-1.3em}  % some vertical spacing
+%\begin{multicols}{2}  % open a multicolumn environment
+%\noindent \emph{Entrepeneurial geek with roots in the open source movement. Passionately enabling software-related teams to deliver. Creates/\,structures/\,improves processes. Architects and helps to implement future-proof solutions. Coaches both individuals and groups.}
+%%\\
+%%At the age of seven (1989) Cies wrote his first lines of code in a \acr{LOGO}-like language on an \acr{MSX} (pre-\acr{PC}).  Two years later he attended a conference on an emerging new technology, the Internet, at the Erasmus University from which he would graduate 16 years later (2000) with a degree in Business Computer Science.
+%%After being introduced to the open source movement in 1997, he taught himself a variety of skills including system administration and programming (Bash, Python, Ruby \& \CPP).  By 2002 he got his pet project \acr{KT}urtle ---a zero-entry-barrier programming environment--- included in \acr{KDE}'s \emph{edu} module, and thereby in almost every Linux distribution.
+%%Extensively travelled Europe and Asia after graduating. On return his professional life became a mix of hands-on work in startups and web software agencies, while settling as a husband and father in personal life.
+%\end{multicols}
+%\spacedhrule{0em}{-0.4em}
+\vspace{-3.3em}  % some vertical spacing
 \roottitle{Experience}
 
 \headedsection
   {\href{https://www.tomra.com/en/}{\acr{TOMRA Sorting NV}}}
   {\textsc{Haasrode, Belgium}} {%
   \headedsubsection
-  {Senior Research Scientist - PhD Student (Baekeland mandaat)}
+  {Senior Research Scientist - PhD Student (VLAIO Baekeland mandaat)}
   {Oct \apo16 -- present}
   {\bodytext{
-	Robust statistics to provide statistical methods which are not unduly affected
-	by outliers: multivariate observations that deviate from normal samples. Classical chemometrical estimators (e.g. SVM's, PLS, PCA, ...) often have poor performance on datasets with outliers. Although it is fairly
+	%Robust statistics to provide statistical methods which are not unduly affected
+	%by outliers: multivariate observations that deviate from normal samples. 
+	Classical machine learning methods (e.g. SVM's, PLS, PCA, CNN's, ...) often have poor performance on datasets with outliers. Although it is fairly
 	easy to show the sometimes dramatic effects caused by just
 	one outlier in the majority of statistical machine learning
 	techniques, the use of robust statistics in industrial machine
@@ -101,7 +154,7 @@
 	research and development of new, robust sparse statistical
 	methods which can handle modern datasets under state of
 	the art, industrial real-time constraints.\\
-	Programming languages: Python, MATLAB, C++, Julia
+	Programming languages: Python, MATLAB, C++, Julia, Git
 }}
 
   \vspace{+1em}  
@@ -109,7 +162,7 @@
     {Senior Research Scientist}
     {Oct \apo16 -- present}
     {\bodytext{GPGPU gebaseerde classificatoren. In essentie omvat zo een efficiëntie gedreven classifi-cator een C++, GPU raamwerk waarin onderstaande technieken toegepast worden:(a) Detectie van multivariate outliers.(b) Normalisatie  klasse balancering – indien opportuun.(c) Ongesuperviseerde, statistisch aangedreven parameter optimalisatie.(d) Aansturen van het geïntegreerd crossvalidatiemodel.(e) Een Hammingsafstand gebaseerde foutcorrectiemechanisme. \\
-	Programming languages: MATLAB, C++, cuBLAS, CUDA 
+	Programming languages: MATLAB, C++, cuBLAS, CUDA, Python, Git
 }}
 
  \vspace{+1em}  
@@ -117,7 +170,7 @@
 {Research Scientist, digital signal processing}
 {Oct \apo16 -- present}
 {\bodytext{Chemometrischeanalyse,onderzoek en implementatievanchemometrischemodellen,pre-processing.Mijn initieel werk was het onderzoek naar de werking en haalbaarheid van chemometri-sche methoden (PCR, O-PLS, PLS-DA, ... ) en pre processingsmethoden die goede resulta-ten gaf op onze 256-dimensionele spectrale data (er bestaan immers geen specifieke stel-regels die onmiddellijk leiden tot het vinden van de beste methode). Prototypes werdendoor mij geïmplementeerd in Java. Daarnaast had ik een groot aandeel in de inverse en-gineering van bestaande classificatoren.2. Research, Development en implementatie van het Smart Sort framework.Smart Sortis de commerciële naam van de wiskundige oplossingen die gebruikt wordenom sorteermachines volledig automatisch in te stellen. Na het aanbieden van een trai-ningsdata zorgt dit raamwerk automatisch voor de meest efficiënte machine-instellingen.Zonder in detail te gaan omvat deze technologie:(a) Verschillende entropie, Hellinger - en mutual information gebaseerde contrastbepa-lingsfilters.(b) Verschillende outlier eliminatie principes om zuivere trainingsdata te krijgen.(c) Statistische efficiëntie gebaseerde (one, multiclass) classificatoren die specifieke nor-malisatiealgoritmes gebruiken.Deze technologie is integraal geïmplementeerd geworden in Java en communiceert recht-streeks met de machinehardware over een generieke communicatielaag.\\
-	Programming languages: JAVA, C++, Octave, batch}}
+	Programming languages: JAVA, Octave, batch scripts, Subversion}}
 }
 
 \headedsection
@@ -369,7 +422,7 @@
 
 \inlineheadsection	
 {Research interests (non-exhaustive):}
-{Data mining, (robust) calibration methods, (non-linear) classification, robust statistics, big data, CNN's, real-time GP-GPU \& MapReduce based processing, SVM's.}
+{Data mining, (robust) calibration methods, (non-linear) classification, robust statistics, big data, CNN's, real-time GP-GPU \& MapReduce based processing, machine learning pattern recognition techniques.}
 
 \inlineheadsection	
   {General interests (non-exhaustive)):}
