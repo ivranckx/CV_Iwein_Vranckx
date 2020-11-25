@@ -11,9 +11,11 @@
 
 % Start a document with the here given default font size and paper size.
 \documentclass[10pt,a4paper]{article}
+%\usepackage{fontspec}
 \usepackage{fontawesome}
 % Set the page margins.
 \usepackage[a4paper,margin=0.75in]{geometry}
+\usepackage{bibentry}
 
 % Setup the language.
 \usepackage[english]{babel}
@@ -22,12 +24,14 @@
 % Makes resume-specific commands available.
 \usepackage{resume}
 
-
+\usepackage{academicons}
+\definecolor{orcidlogocol}{HTML}{A6CE39}
 
 
 \begin{document}  % begin the content of the document
 \sloppy  % this to relax whitespacing in favour of straight margins
-
+\nobibliography{ref}
+\bibliographystyle{unsrt}
 
 % title on top of the document
 \maintitle{Iwein Vranckx}{October 14, 1978}{Last update on \today}
@@ -47,8 +51,8 @@
 \href{http://linkedin.com/in/ivranckx}{\faLinkedin \; Linkedin}
 \\
 \faMapMarker \; Oudenbos  81, 
-3202\thinspace Rillaar\sbull%{\large \sc ld}\sbull
-Belgium
+3202\thinspace Rillaar, Belgium\sbull%{\large \sc ld}\sbull
+%\href{https://orcid.org/0000-0002-2439-6906}{\textcolor{orcidlogocol}{\aiOrcid} \hspace{0.2mm} orcid.org/0000-0002-2439-6906}
 
 \spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
 
@@ -95,7 +99,7 @@ After being introduced to the open source movement in 1997, he taught himself a 
 {\href{https://www.tomra.com/en/}{\acr{Unizo HQ}}}
 {\textsc{Haasrode, Belgium}} {%
 	\headedsubsection
-	{ICT-Adviseur Unizo}
+	{ICT-Consultant}
 	{2010 -- 2010}
 	{\bodytext{Als IT adviseur stond ik in voor de software en hardwarematige ICT-advisering aanKMO’s op basis van input van externe ICT-partners, eigen opzoekingwerk en eigen ervaringen.Ik initieerde, begeleidde en bracht ICT-veranderingstrajecten (ERP, CRM, CMS, ..) tot uitvoeringbij KMO’s en ruimer binnen een sector. Naast de bovengenoemde punten verzorgde ik de dage-lijkse communicatie en opvolging met de betrokken beroepssectoren - evenals de organisatievan zowel praktische als inhoudelijke opleidingen, workshops en netwerkevents}}}
 
@@ -242,7 +246,7 @@ After being introduced to the open source movement in 1997, he taught himself a 
 
 \vspace{-0.2em}
 \begin{center}
-  \emph{\small Please refer to \href{http://www.linkedin.com/in/ciesbreijs}{Cies' LinkedIn profile} for a more complete list of work experience along with recommendations.}
+  \emph{\small Please refer to \href{http://www.linkedin.com/in/ivranckx}{my LinkedIn profile} for a more complete list of work experience.}
 \end{center}
 
 
@@ -254,9 +258,8 @@ After being introduced to the open source movement in 1997, he taught himself a 
   {\href{https://wet.kuleuven.be/english}{KU Leuven, faculty of Science}}
   {\textsc{Leuven, Belgium}} {%
   \headedsubsection
-    {Doctor of Science (PhD): Statistics (dr.) % \textnormal{~(\acr{CS}~\,\&\,Economics)}
-    }
-    {2016 -- 2020}{}
+    {Doctor of Science (PhD): Statistics (dr.)}
+    {2016 -- 2020}{\\Development of real-time, robust statistical methods with novel applications in food sorting}
 }
 \vspace{+0.2em}
 \headedsection
@@ -264,7 +267,7 @@ After being introduced to the open source movement in 1997, he taught himself a 
   {\textsc{Leuven, Belgium}} {%
   \headedsubsection
     {Master of Electrical Engineering: Information Systems and signal Processing (ir.)}
-    {2005 -- 2009} {}
+    {2005--2009} {\\Development of an SVM-based OCS for Latin-Greek manuscripts}
 }
 
 \vspace{+0.2em}
@@ -273,7 +276,7 @@ After being introduced to the open source movement in 1997, he taught himself a 
   {\textsc{Antwerp, Belgium}} {%
   \headedsubsection
     {Master of Biomedical Sciences: Neurosciences (Research)}
-    {2004 -- 2005} {}
+    {2004 -- 2005} {\\Reduction of ring artefacts on \acr{$\mu$-CT} images}
 }
 
 \vspace{+0.2em}
@@ -282,7 +285,7 @@ After being introduced to the open source movement in 1997, he taught himself a 
 {\textsc{Antwerp, Belgium}} {%
 	\headedsubsection
 	{Master in Electronics and ICT Engineering Technology (ing.)}
-	{2001 -- 2004} {}
+	{2001 -- 2004} {\\Tristan: data acquisition software for a heat treatment production process}
 }
 
 \vspace{+0.2em}
@@ -291,7 +294,7 @@ After being introduced to the open source movement in 1997, he taught himself a 
 {\textsc{Antwerp, Belgium}} {%
 	\headedsubsection
 	{Bachelor of Electromechanics}
-	{1998 -- 2001} {}
+	{1998 -- 2001} {\\Development of a (SQL-based) database application for the registration of production data}
 }
 
 \spacedhrule{0.5em}{-0.4em}
@@ -312,14 +315,29 @@ After being introduced to the open source movement in 1997, he taught himself a 
 
 \roottitle{Publications}
 
-\inlineheadsection
-{Non-exhaustive and in alphabetical order:}
+\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
+{Published:}
 {
-poffff
+	I.~Vranckx. Development of real-time, robust statistical methods with novel applications in food sorting (2020). Dissertation-thesis.
+	
+	\hangindent=3.5mm
+	\hangafter=1
+	Raymaekers, J., P.~J. Rousseeuw, and I.~Vranckx (2018).
+	\newblock Discussion of ``{T}he power of monitoring: how to make the most of a contaminated multivariate sample''.
+	\newblock {\em Statistical Methods \& Applications\/}~{\em 27}, 589--594. 
+	
+	De~Ketelaere, B., M.~Hubert, J.~Raymaekers, P.~J. Rousseeuw, and I.~Vranckx	(2020).
+	\newblock Real-time outlier detection for large datasets by {RT-DetMCD}.
+	\newblock {\em Chemometrics and Intelligent Laboratory Systems\/}~{\em 199}. 
+	
+	I. Vranckx, J. Raymaekers, B. De Ketelaere, P. J. Rousseeuw, M. Hubert (2021).
+	\newblock Real-time discriminant analysis in the presence of label and measurement noise.
+	\newblock {\em Chemometrics and Intelligent Laboratory Systems\/}~{\em 208}.
 }
-
-
-
+\vspace{0.5em}
+\inlineheadsection
+{Under review:}
+{J. Schreurs, I. Vranckx, B. De Ketelaere, M. Hubert, J. A.K. Suykens, P. J. Rousseeuw (2020). Outlier detection in non-elliptical data by kernel MRCD. \textit{ArXiv e-prints}, arXiv:2008.02046. I. Vranckx and J. Schreurs contributed equally to this work.}
 
 \spacedhrule{1.6em}{-0.4em}
 
