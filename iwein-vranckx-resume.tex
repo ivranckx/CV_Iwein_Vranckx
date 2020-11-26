@@ -144,7 +144,7 @@
 	%Robust statistics to provide statistical methods which are not unduly affected
 	%by outliers: multivariate observations that deviate from normal samples. 
 	Classical statistical methods (e.g. SVM's, PCA, QDA, CNN's, ...) often have poor performance on datasets with outliers. Although it is fairly
-	easy to show the sometimes dramatic effects caused by just
+	easy to show the dramatic effects caused by just
 	one outlier, the use of robust statistics in industrial machine
 	learning tasks is only gradually being recognized in the last years.  TOMRA Sorting develops industrial food inspection machines which process several
 	gigabytes of high dimensional measurements in milliseconds, thereby pushing against the boundaries of the available computational power. 
@@ -153,16 +153,17 @@
 	load continuously forces research into massive parallelization technologies and – more importantly - the research and development of new, robust and sparse machine learning 
 	methods which can process large datasets under real-time constraints.\\	
 	To this end I initialised an intra disciplinary project between KULeuven, TOMRA and VLAIO which was directed towards strategic classification research with a clear defined economic finality. 	\vspace{0.2em} \\	
-	\deemph{Keywords: Python/MATLAB, C++, Git, DetMCD, robust (non)linear methods.}
+	\deemph{Keywords: Python/MATLAB, C++, Git, robust (non)linear regression and classification methods.}
 }}
 
   \vspace{+1em}  
   \headedsubsection
     {Senior Research Scientist}
     {2014 -- 2016}
-    {\bodytext{GPGPU gebaseerde classificatoren. In essentie omvat zo een efficiëntie gedreven classifi-cator een C++, GPU raamwerk waarin onderstaande technieken toegepast worden:(a) Detectie van multivariate outliers.(b) Normalisatie  klasse balancering – indien opportuun.(c) Ongesuperviseerde, statistisch aangedreven parameter optimalisatie.(d) Aansturen van het geïntegreerd crossvalidatiemodel.(e) Een Hammingsafstand gebaseerde foutcorrectiemechanisme. \\
-    		
-	\deemph{Keywords: MATLAB, C++, cuBLAS, CUDA, Python, Git, global optimization.}
+    {\bodytext{
+    GP-GPU's are powerful tools that are well-suited to unravelling complex, real-world problems. They form the foundation of modern deep learning frameworks such as TensorFlow \& Caffe (e.g. self-driving cars). 
+    		GPGPU gebaseerde classificatoren. In essentie omvat zo een efficiëntie gedreven classifi-cator een C++, GPU raamwerk waarin onderstaande technieken toegepast worden:(a) Detectie van multivariate outliers.(b) Normalisatie  klasse balancering – indien opportuun.(c) Ongesuperviseerde, statistisch aangedreven parameter optimalisatie.(d) Aansturen van het geïntegreerd crossvalidatiemodel.(e) Een Hammingsafstand gebaseerde foutcorrectiemechanisme. \\    		
+	\deemph{Keywords: MATLAB, C++, cuBLAS, CUDA, Git, global optimization, LS-SVM's, loss functions.}
 }}
 
  \vspace{+1em}  
@@ -171,8 +172,11 @@
 {2010 -- 2014}
 {\bodytext{
 		%Data mining, exploratief onderzoek en implementatie van chemometrischemodellen,pre-processing.Mijn initieel werk was het onderzoek naar de werking en haalbaarheid van latente regressie methoden (PCR, O-PLS, PLS-DA, ... ). Prototypes werdendoor mij geïmplementeerd in Java. Daarnaast had ik een groot aandeel in de inverse en-gineering van bestaande classificatoren.2. 
-		Research, Development en implementatie van het Smart Sort framework.Smart Sortis de commerciële naam van de wiskundige oplossingen die gebruikt wordenom sorteermachines volledig automatisch in te stellen. Na het aanbieden van een trai-ningsdata zorgt dit raamwerk automatisch voor de meest efficiënte machine-instellingen.Zonder in detail te gaan omvat deze technologie:(a) Verschillende entropie, Hellinger - en mutual information gebaseerde contrastbepa-lingsfilters.(b) Verschillende outlier eliminatie principes om zuivere trainingsdata te krijgen.(c) Statistische efficiëntie gebaseerde (one, multiclass) classificatoren die specifieke nor-malisatiealgoritmes gebruiken.Deze technologie is integraal geïmplementeerd geworden in Java en communiceert recht-streeks met de machinehardware over een generieke communicatielaag.\\
-	\deemph{Keywords: JAVA, Octave, Subversion, optimization, regression, KDE }}
+		
+		\textit {Smart Sort} is TOMRA's commercial name for an algorithm that I developed in two years. It enables machines to auto-configure itself: after providing training data the framework automatically ensures the most efficient machine settings for a given specificity-sensitivity trade-off setting. Although multi-class classification is entirely  supported through ensemble learning, feedback from customers surprisingly learned us that it is mostly used as (an ensemble of) one class classifier(s). The algorithm is trained on good product(s) only, in turn demanding that the machine rejects all unknown, foreign materials such as glass, plastics and stones. It is currently still sold as a machine option, and it became the de-facto classifier standard for tobacco sorting as it reduces machine change-over time dramatically. I implemented the first prototypes entirely in Java using test-driven development, and guided the software team afterwards towards it commercial/persistent implementation.
+		
+		
+	\deemph{Keywords: Java, Octave, Subversion, optimization, regression, KDE, ensembles (boosting). }}
 }}
 
 \headedsection
@@ -291,24 +295,28 @@
 
 \inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
 {Technical expertise:}
-{Leading and recruiting teams of software engineers.  Big fan of Agile methodologies, continuous delivery and functional programming.  Enjoys writing Ruby/\nsp Python/\nsp Java/\nsp \CPP~and Haskell.  Solid knowledge of the full web technology stack.  Able to architect \textit{and} implement distributed/\acr{HA} systems.  Strong Linux administration skills (e.g.\ Bash scripting, Apache/\acr{NGINX}, Postgres/My/No\acr{SQL}, ElasticSearch).  Well experienced with virtualization/containerization (Docker/Kubernetes, \acr{KVM}, Xen and several \acr{AWS} solutions) and DevOps (Puppet) Test driven development. Sublime text, Gitkraken and Pycharm user.}
+{Leading and recruiting teams of software engineers.  Big fan of Agile methodologies, continuous delivery and functional programming.  Enjoys writing Ruby/\nsp Python/\nsp Java/\nsp \CPP~and Haskell.  Solid knowledge of the full web technology stack.  Able to architect \textit{and} implement distributed/\acr{HA} systems.  Strong Linux administration skills (e.g.\ Bash scripting, Apache/\acr{NGINX}, Postgres/My/No\acr{SQL}, ElasticSearch). ensemble learning.  Well experienced with virtualization/containerization (Docker/Kubernetes, \acr{KVM}, Xen and several \acr{AWS} solutions) and DevOps (Puppet) Test driven development. Sublime text, Gitkraken and Pycharm user.}
 
 \vspace{0.5em}
 \inlineheadsection
 {Natural languages:}
 {Dutch \emph{(mother tongue)}, English \emph{(professional proficiency)}, French \emph{(elementary proficiency)}}
+\vspace{0.5em}
+\inlineheadsection
+{Programming languages (non-exhaustive):}
+{MATLAB, Octave, R, Python, Julia, C++, CUDA, Java, SQL} %, BLAS/LAPACK/LINPACK.}
 
 \spacedhrule{1.6em}{-0.4em}
 
 \roottitle{Interests}
 
 \inlineheadsection	
-{Research interests (non-exhaustive):}
-{Data mining, (robust) calibration methods, (non-linear) classification, robust statistics, big data, CNN's, real-time GP-GPU \& MapReduce based processing, machine learning pattern recognition techniques, kernel embeddings of distributions, high dimensional, collinear data, Least Squares Support Vector Machines, anomaly \& fraud detection, Kaggle datasets, multivariate global optimization methods.}
+{Research interests/expertise (non-exhaustive):}
+{Data mining, (robust) calibration methods, (non-linear) classification, robust statistics, big data, CNN's, real-time GP-GPU \& MapReduce based processing, machine learning pattern recognition techniques, kernel embeddings of distributions, high dimensional, collinear data, Least Squares Support Vector Machines, anomaly \& fraud detection, Kaggle datasets, multivariate global optimization methods, econometrics}
 \vspace{0.5em}
 \inlineheadsection	
-  {General interests (non-exhaustive)):}
-  {Sourdough bread baking and jogging (i.e. my new COVID related hobbies), chess, BZFlag, OOP-programming, cycling, typography (e.g. \LaTeX), fraud detection, macrobiotic food, cooking, intra-disciplinary research collaboration, valorization of innovation, travel, speaking at conferences and lunch \& learns.}
+  {General interests/expertise (non-exhaustive)):}
+  {Sourdough bread baking and jogging (i.e. my new COVID related hobbies), chess, BZFlag, OOP-programming, cycling, typography (e.g. \LaTeX), fraud detection, macrobiotic food, cooking, intra-disciplinary research collaboration, valorization of innovation, travel, speaking at conferences, lunch \& learns, quality time with my three kinds.}
 
 
 \end{document}
