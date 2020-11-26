@@ -36,7 +36,7 @@
 \newcommand{\deemph}[1]{{\color{black!40}#1}}
 
 % fancy quotes
-\definecolor{quotemark}{gray}{0.7}
+\definecolor{quotemark}{gray}{0.6}
 \makeatletter
 \def\fquote{%
 	\@ifnextchar[{\fquote@i}{\fquote@i[]}%]
@@ -59,7 +59,7 @@
 		}%
 		\item[]%
 		\begin{picture}(0,0)%
-			\put(-15,-5){\makebox(0,0){\scalebox{3}{\textcolor{quotemark}{``}}}}%
+			\put(-15,-5){\makebox(0,0){\scalebox{4}{\textcolor{quotemark}{``}}}}%
 		\end{picture}%
 		\begingroup\itshape}%
 	%%%%********************************************************************
@@ -69,7 +69,7 @@
 			\hspace{0.8\textwidth}%
 			\begin{picture}(0,0)(0,0)%
 				\put(15,15){\makebox(0,0){%
-						\scalebox{3}{\color{quotemark}''}}}%
+						\scalebox{4}{\color{quotemark}''}}}%
 		\end{picture}}%
 		\ifx\tempa\empty%
 		\else%
@@ -117,7 +117,7 @@
 \href{https://orcid.org/0000-0002-2439-6906}{\textcolor{orcidlogocol}{\aiOrcid} \hspace{0.2mm} 0000-0002-2439-6906}
 \spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
 \begin{fquote}[J. Conrad][Heart of Darkness][1902]
-	Outliers are like thinking about an enigma. There it is before you - smiling, frowning, inviting, grand, mean, insipid, or savage, and always mute with an air of whispering, ‘Come and find out'.
+	\large	Outliers are like thinking about an enigma. There it is before you - smiling, frowning, inviting, grand, mean, insipid, or savage, and always mute with an air of whispering, ‘Come and find out'.
 \end{fquote}
 %\spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
 %\roottitle{}  % a root section title
@@ -136,6 +136,7 @@
 \headedsection
   {\href{https://www.tomra.com/en/}{\acr{TOMRA Sorting NV}}}
   {\textsc{Haasrode, Belgium}} {%
+  \vspace{+0.2em} 
   \headedsubsection
   {Senior Research Scientist - PhD Student}
   {Oct 2016 -- Nov 2020}
@@ -151,44 +152,66 @@
 	My research activities proved that the cross-fertilization of industrial machine classifiers and robust statistical methods was beneficial. However, the extreme high computational
 	load continuously forces research into massive parallelization technologies and – more importantly - the research and development of new, robust and sparse machine learning 
 	methods which can process large datasets under real-time constraints.\\	
-	To this end I initialised an intra disciplinary project between KULeuven, TOMRA and VLAIO which was directed towards strategic research into sparse classification with a clear defined economic finality. \\	
-
+	To this end I initialised an intra disciplinary project between KULeuven, TOMRA and VLAIO which was directed towards strategic classification research with a clear defined economic finality. 	\vspace{0.2em} \\	
 	\deemph{Keywords: Python/MATLAB, C++, Git, DetMCD, robust (non)linear methods.}
 }}
 
   \vspace{+1em}  
   \headedsubsection
     {Senior Research Scientist}
-    {Oct \apo16 -- present}
+    {2014 -- 2016}
     {\bodytext{GPGPU gebaseerde classificatoren. In essentie omvat zo een efficiëntie gedreven classifi-cator een C++, GPU raamwerk waarin onderstaande technieken toegepast worden:(a) Detectie van multivariate outliers.(b) Normalisatie  klasse balancering – indien opportuun.(c) Ongesuperviseerde, statistisch aangedreven parameter optimalisatie.(d) Aansturen van het geïntegreerd crossvalidatiemodel.(e) Een Hammingsafstand gebaseerde foutcorrectiemechanisme. \\
     		
-	\deemph{Keywords: MATLAB, C++, cuBLAS, CUDA, Python, Git}
+	\deemph{Keywords: MATLAB, C++, cuBLAS, CUDA, Python, Git, global optimization.}
 }}
 
  \vspace{+1em}  
   \headedsubsection
 {Research Scientist, digital signal processing}
-{Oct \apo16 -- present}
-{\bodytext{Chemometrischeanalyse,onderzoek en implementatievanchemometrischemodellen,pre-processing.Mijn initieel werk was het onderzoek naar de werking en haalbaarheid van chemometri-sche methoden (PCR, O-PLS, PLS-DA, ... ) en pre processingsmethoden die goede resulta-ten gaf op onze 256-dimensionele spectrale data (er bestaan immers geen specifieke stel-regels die onmiddellijk leiden tot het vinden van de beste methode). Prototypes werdendoor mij geïmplementeerd in Java. Daarnaast had ik een groot aandeel in de inverse en-gineering van bestaande classificatoren.2. Research, Development en implementatie van het Smart Sort framework.Smart Sortis de commerciële naam van de wiskundige oplossingen die gebruikt wordenom sorteermachines volledig automatisch in te stellen. Na het aanbieden van een trai-ningsdata zorgt dit raamwerk automatisch voor de meest efficiënte machine-instellingen.Zonder in detail te gaan omvat deze technologie:(a) Verschillende entropie, Hellinger - en mutual information gebaseerde contrastbepa-lingsfilters.(b) Verschillende outlier eliminatie principes om zuivere trainingsdata te krijgen.(c) Statistische efficiëntie gebaseerde (one, multiclass) classificatoren die specifieke nor-malisatiealgoritmes gebruiken.Deze technologie is integraal geïmplementeerd geworden in Java en communiceert recht-streeks met de machinehardware over een generieke communicatielaag.\\
-	Programming languages: JAVA, Octave, batch scripts, Subversion}}
-}
+{2012 -- 2014}
+{\bodytext{
+		%Data mining, exploratief onderzoek en implementatie van chemometrischemodellen,pre-processing.Mijn initieel werk was het onderzoek naar de werking en haalbaarheid van latente regressie methoden (PCR, O-PLS, PLS-DA, ... ). Prototypes werdendoor mij geïmplementeerd in Java. Daarnaast had ik een groot aandeel in de inverse en-gineering van bestaande classificatoren.2. 
+		Research, Development en implementatie van het Smart Sort framework.Smart Sortis de commerciële naam van de wiskundige oplossingen die gebruikt wordenom sorteermachines volledig automatisch in te stellen. Na het aanbieden van een trai-ningsdata zorgt dit raamwerk automatisch voor de meest efficiënte machine-instellingen.Zonder in detail te gaan omvat deze technologie:(a) Verschillende entropie, Hellinger - en mutual information gebaseerde contrastbepa-lingsfilters.(b) Verschillende outlier eliminatie principes om zuivere trainingsdata te krijgen.(c) Statistische efficiëntie gebaseerde (one, multiclass) classificatoren die specifieke nor-malisatiealgoritmes gebruiken.Deze technologie is integraal geïmplementeerd geworden in Java en communiceert recht-streeks met de machinehardware over een generieke communicatielaag.\\
+	\deemph{Keywords: JAVA, Octave, Subversion, optimization, regression, KDE }}
+}}
 
 \headedsection
-{\href{https://www.tomra.com/en/}{\acr{Unizo HQ}}}
+{\href{https://www.unizo.be/}{\acr{Unizo HQ}}}
 {\textsc{Brussels, Belgium}} {%
+  \vspace{+0.2em} 
 	\headedsubsection
 	{ICT-Consultant}
 	{2010 -- 2010}
-	{\bodytext{Als IT adviseur stond ik in voor de software en hardwarematige ICT-advisering aanKMO’s op basis van input van externe ICT-partners, eigen opzoekingwerk en eigen ervaringen.Ik initieerde, begeleidde en bracht ICT-veranderingstrajecten (ERP, CRM, CMS, ..) tot uitvoeringbij KMO’s en ruimer binnen een sector. Naast de bovengenoemde punten verzorgde ik de dage-lijkse communicatie en opvolging met de betrokken beroepssectoren - evenals de organisatievan zowel praktische als inhoudelijke opleidingen, workshops en netwerkevents}}}
+	{\bodytext{
+	I managed ICT change processes for SME's related to the integration of ERP, CRM, webshop, .. software. I also took care of the daily incoming questions, as well as the organization of training courses, workshops and networking events.
+	}}}
 
-\vspace{-0.2em}
+\headedsection
+{\href{https://www.sintmartinusscholen.be/}{\acr{Sint-Martinuscollege Overijse, campus Lipsius}}}
+{\textsc{Overijse, Belgium}} {%
+	\vspace{+0.2em} 
+	\headedsubsection
+	{Science and mathematics teacher}
+	{2009 -- 2010}
+	{\bodytext{Par-time biology, maths - and science teacher for the 2' and 3' degree students.
+}}}
+
+%\vspace{+0.2em} 
+%{}{\acr{Lipsius college}}
+%{\textsc{Overijse, Belgium}} {%	
+%	\headedsubsection
+%	{Science and mathematics teacher}
+%	{2010 -- 2010}
+%	{\bodytext{Par-time teacher for the 2' and 3' degree students.}}}
+%	}
+\vspace{+0.2em} 
 \begin{center}
   \emph{\small Please refer to \href{http://www.linkedin.com/in/ivranckx}{my LinkedIn profile} for a more complete list of work experience.}
 \end{center}
 
 
 \spacedhrule{-0.2em}{-0.4em}
-
+\newpage
 \roottitle{Education}
 
 \headedsection
@@ -281,11 +304,11 @@
 
 \inlineheadsection	
 {Research interests (non-exhaustive):}
-{Data mining, (robust) calibration methods, (non-linear) classification, robust statistics, big data, CNN's, real-time GP-GPU \& MapReduce based processing, machine learning pattern recognition techniques.}
-
+{Data mining, (robust) calibration methods, (non-linear) classification, robust statistics, big data, CNN's, real-time GP-GPU \& MapReduce based processing, machine learning pattern recognition techniques, kernel embeddings of distributions, high dimensional, collinear data, Least Squares Support Vector Machines, anomaly \& fraud detection, Kaggle datasets, multivariate global optimization methods.}
+\vspace{0.5em}
 \inlineheadsection	
   {General interests (non-exhaustive)):}
-  {art, Buddhism, cryptography, functional programming, Go (board game), history, music (from classical and jazz to Berlin-techno), \acr{NLP}, permaculture, philosophy, rock climbing, startups, travel, typography (e.g.\ graphic design, \LaTeX), \acr{UX}-design and vegan cuisine.}
+  {Sourdough bread baking (COVID related hobby), chess, OOP-programming, jogging, cycling, typography (e.g. \LaTeX), fraud detection, macrobiotic food, cooking, intra-disciplinary research collaboration, valorization of innovation, travel, speaking at conferences.}
 
 
 \end{document}
